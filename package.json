@@ -1,0 +1,51 @@
+{
+    "name": "n8n-nodes-corteksa",
+    "version": "0.1.0",
+    "description": "n8n community node for Corteksa CRM: records, tasks, comments, WhatsApp, email, workflows and approvals",
+    "license": "MIT",
+    "homepage": "https://github.com/DevAbdelrahmanSayedCorteksa/n8n-nodes-corteksa",
+    "keywords": [
+        "n8n-community-node-package"
+    ],
+    "author": {
+        "name": "Corteksa",
+        "email": "marketing@corteksa.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DevAbdelrahmanSayedCorteksa/n8n-nodes-corteksa.git"
+    },
+   "scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+    "files": [
+        "dist"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/credentials/CorteksaApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/Corteksa/Corteksa.node.js",
+            "dist/nodes/CorteksaTrigger/CorteksaTrigger.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "^0.57.3",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^21.1.0",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    }
+}
