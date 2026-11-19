@@ -2,6 +2,13 @@
 
 All notable changes to this package are documented in this file.
 
+## 0.1.1
+
+### Changed
+
+- README: install steps for n8n Cloud and self-hosted instances (verified community nodes setting, environment
+  variables, install by name, queue mode). No code changes.
+
 ## 0.1.0
 
 First release.
