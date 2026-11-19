@@ -16,8 +16,23 @@ and documents.
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community
-nodes documentation and install `n8n-nodes-corteksa`.
+Corteksa is a verified community node. Installing it takes the instance owner or an admin, and n8n 2.46.1 or later
+(see [Compatibility](#compatibility)).
+
+**n8n Cloud.** Turn on **Verified community nodes** in the Admin Panel (Manage) and restart the instance. Then search
+for "Corteksa" in the nodes panel and add it.
+
+**Self-hosted.** Verified nodes appear in the nodes panel when both of these are on (both default to `true`):
+
+```bash
+N8N_COMMUNITY_PACKAGES_ENABLED=true
+N8N_VERIFIED_PACKAGES_ENABLED=true
+```
+
+Restart n8n after changing them. If "Corteksa" still does not appear in search, install it by name: **Settings →
+Community nodes → Install**, enter `n8n-nodes-corteksa`. In queue mode, install it on the main instance and on every
+worker. The n8n [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) covers the npm
+and Docker routes.
 
 The package adds two nodes:
 
